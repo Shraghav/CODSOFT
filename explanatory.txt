@@ -9,3 +9,12 @@ for deleting a file do the steps as same as adding a file
 Git to local -> git pull
 
 Creating a new Folder with respect to git
+What we will do here first create a repository
+Next we will  create a local Folder
+Initializing a git so that we could deploy them in the created repository
+Now we are adding files and committing.
+Then we are using remote add origin (because there is no branch available as of now) remember to copy the http link
+If we use git push origin main , it will not work properly because the branch name is changed
+So either we could use the changed branch name or we could change the branch name and use it.
+To remove the add orgin in remote , use git remote rm origin
+After pushing the work is done!
