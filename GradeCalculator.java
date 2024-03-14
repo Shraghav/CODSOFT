@@ -32,5 +32,6 @@ public class GradeCalculator {
             System.out.print("Grade : E");
         else if (avg<40)
             System.out.print("Sorry ! You Failed");
+    obj.close();
     }
 }

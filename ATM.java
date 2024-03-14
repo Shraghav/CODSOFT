@@ -28,39 +28,40 @@ public class ATM {
         Scanner obj = new Scanner (System.in);
 
         //Withdraw and Deposit functionality
-        while (true){
+        while (true) {
             System.out.println("withdraw or deposit:");
-            String name=obj.next();
+            String name = obj.next();
 
             //For Withdrawing
-            if (name.equals("withdraw")){
-            System.out.print("Enter Amount to withdraw:");
-            int withDrawAmount=obj.nextInt();
-            W.withDraw(total,withDrawAmount);
-            //Accessing ATM object W for balance
-            if (withDrawAmount>total){
-                System.out.println("You only have "+total);
-                continue;
-            }
-            else if (total-withDrawAmount==0){
-                System.out.println("Your bank balance is nill. You cannot withdraw anymore");
-                break;
-            }
-            System.out.println("Balance amount:");
-            W.balance(total-withDrawAmount);
+            if (name.equals("withdraw")) {
+                System.out.print("Enter Amount to withdraw:");
+                int withDrawAmount = obj.nextInt();
+                W.withDraw(total, withDrawAmount);
+                //Accessing ATM object W for balance
+                if (withDrawAmount > total) {
+                    System.out.println("You only have " + total);
+                    continue;
+                } else if (total - withDrawAmount == 0) {
+                    System.out.println("Your bank balance is nill. You cannot withdraw anymore");
+                    break;
+                }
+                System.out.println("Balance amount:");
+                W.balance(total - withDrawAmount);
             }
 
             //For depositing
-            if (name.equals("deposit")){
+            if (name.equals("deposit")) {
                 System.out.println("Enter Amount to deposit:");
-                int depositAmount=obj.nextInt();
+                int depositAmount = obj.nextInt();
                 //depositing the required amount
-                W.deposit(total,depositAmount);
+                W.deposit(total, depositAmount);
                 System.out.println("Balance amount:");
-                W.balance(total+depositAmount);
-                total=total+depositAmount;
+                W.balance(total + depositAmount);
+                total = total + depositAmount;
             }
         }
+        obj.close();
+
     }
 }
 //4) Creating class that represent user's bank account
