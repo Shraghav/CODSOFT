@@ -1,0 +1,2 @@
+So basically we are copying the files from github, but we are not tracking (i.e, whenever we are adding the files). 
+So we just add the files to git and next pushing to the repository
