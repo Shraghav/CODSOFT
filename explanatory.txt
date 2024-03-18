@@ -1,6 +1,7 @@
 
 So basically we are copying the files from github, but we are not tracking (i.e, whenever we are adding the files). 
 
+Use git init to init
 Local to Git -> git add, git commit , git push 
 So we just add the files to git and next pushing to the repository. After we added the file it will go to stagging area
 add doesn't mean we are adding a file. It just mentioned the changes made to stagging area
